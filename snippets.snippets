@@ -1,0 +1,340 @@
+{
+	"const": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"c",
+			"cosnt",
+			"#c",
+			"#cosnt"
+		],
+		"body": [
+			"const $1",
+		],
+		"description": "c to const"
+	},
+	"goto": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"goto",
+			"#goto"
+		],
+		"body": [
+			"// go to ${1:$RELATIVE_FILEPATH}:${2:$TM_LINE_NUMBER}",
+		],
+		"description": "go to line in current file"
+	},
+	"useEffect": {
+		"scope": "javascriptreact,typescriptreact",
+		"prefix": [
+			"useEffect",
+			"#useEffect"
+		],
+		"body": [
+			"useEffect(() => {$1},[])"
+		],
+		"description": "go to line in current file"
+	},
+	"tsprettify": {
+		"scope": "typescript,typescriptreact,svelte",
+		"prefix": [
+			"TS prettify",
+			"#TS prettify"
+		],
+		"body": [
+			"type Prettify<T> = {",
+			"  [k in keyof T]: T[k]",
+			"} & {}",
+			"type Ta = Prettify<$1>",
+			"//   ^?",
+		],
+	},
+	"tshint": {
+		"scope": "typescript,typescriptreact,svelte",
+		"prefix": [
+			"tshint",
+			"twoslash",
+			"#tshint",
+			"#twoslash"
+		],
+		"body": [
+			"//   ^?",
+		],
+		"description": "Use the twoslash notainon to show an object in editor"
+	},
+	"let": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"l",
+			"#l"
+		],
+		"body": [
+			"let $1",
+		],
+		"description": "l to let"
+	},
+	"export": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"e",
+			"#e"
+		],
+		"body": [
+			"export $1",
+		],
+		"description": "e to export"
+	},
+	"function": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"fn",
+			"#fn"
+		],
+		"body": [
+			"($1) => {$2}",
+		],
+		"description": "fn to arrow function"
+	},
+	"anonymous function": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"anfn",
+			"#anfn"
+		],
+		"body": [
+			"(($1) => {$2})()",
+		],
+		"description": "anfn to anonymous arrow function"
+	},
+	"async function": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"asfn",
+			"#asfn"
+		],
+		"body": [
+			"async ($1) => {$2}",
+		],
+		"description": "asfn to async arrow function"
+	},
+	"const async function": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"casfn",
+			"#casfn"
+		],
+		"body": [
+			"const  ${1:$TM_FILENAME_BASE} = async ($2) => {$3}",
+		],
+		"description": "casfn to anonymous arrow function"
+	},
+	"export default": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"ed",
+			"#ed"
+		],
+		"body": [
+			"export default ",
+		],
+		"description": "ed to export default"
+	},
+	"export const": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"ec",
+			"#ec"
+		],
+		"body": [
+			"export const $1 = $2",
+		],
+		"description": "ec to export const"
+	},
+	"const function": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"cfn",
+			"#cfn"
+		],
+		"body": [
+			"const ${1:$TM_FILENAME_BASE} = ($2) => {$3}",
+		],
+		"description": "cfn to const arrow function"
+	},
+	"export const function": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"ecfn",
+			"#ecfn"
+		],
+		"body": [
+			"export const ${1:$TM_FILENAME_BASE} = ($2) => {$3}",
+		],
+		"description": "ecfn to export const arrow function"
+	},
+	"export * from": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"esf",
+			"#esf"
+		],
+		"body": [
+			"export * from '$1'",
+		],
+		"description": "esf to export * from ''"
+	},
+	"import": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"i",
+			"#i"
+		],
+		"body": [
+			"import ${2:module} from '${1:file}'",
+		],
+		"description": "i to import ${2:module} from '${1:file}'"
+	},
+	"clg": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"clg",
+			"#clg"
+		],
+		"body": [
+			"console.log(`$TM_FILENAME:${/*LL*/ $TM_LINE_NUMBER}`, { $1 })"
+		],
+		"description": "log to console.log(/*LL*/ $TM_LINE_NUMBER, '$1:', $1)"
+	},
+	"lg": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"lg",
+			"#lg"
+		],
+		"body": [
+			"logger.info(`$TM_FILENAME:${/*LL*/ $TM_LINE_NUMBER}`, { $1 })"
+		],
+		"description": "log to console.log(/*LL*/ $TM_LINE_NUMBER, '$1:', $1)"
+	},
+	"logPre": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"preLog",
+			"logPre",
+			"#preLog",
+			"#logPre"
+		],
+		"body": [
+			"<pre>",
+			"{JSON.stringify($1, undefined, 2)}",
+			"</pre>"
+		],
+		"description": "log var in jsx using <pre /> and JSON.stringify"
+	},
+	"logStr": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"logStr",
+			"#logStr"
+		],
+		"body": [
+			"console.log(/*LL*/ $TM_LINE_NUMBER, '$1', $1)"
+		],
+		"description": "log to console.log(/*LL*/ $TM_LINE_NUMBER, '$1:', $1)"
+	},
+	"logClip": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"logClip",
+			"#logClip"
+		],
+		"body": [
+			"console.log(/*LL*/ $TM_LINE_NUMBER, $CLIPBOARD)"
+		],
+		"description": "log to console.log(/*LL*/ $TM_LINE_NUMBER, $CLIPBOARD)"
+	},
+	"ternary operator": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"ter",
+			"#ter"
+		],
+		"body": [
+			"${1:condition}",
+			"  ? ${2:true}",
+			"  : ${3:false}",
+		],
+		"description": "ter to ternary operator"
+	},
+	"react component": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": [
+			"rfc",
+			"#rfc"
+		],
+		"body": [
+			"// @ts-expect-error // export * from './${TM_FILENAME_BASE}'",
+			"",
+			"export const ${TM_FILENAME_BASE} = (p: { children?: React.ReactNode }) => {",
+			"  return <div>${TM_FILENAME_BASE} & { p.children }</div>",
+			"}"
+		],
+	},
+	"react page component": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": [
+			"rfcpage",
+			"page",
+			"#rfcpage",
+			"#page"
+		],
+		"body": [
+			"export default function Page(){",
+			"  return <div>${TM_FILENAME_BASE}</div>",
+			"}"
+		],
+		"description": "rfcpage to next page component"
+	},
+	"delayPromise": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"delay",
+			"delayPromise",
+			"promiseDelay",
+			"#delay",
+			"#delayPromise",
+			"#promiseDelay"
+		],
+		"body": [
+			"const delay = async (x: number) => {",
+			"  return new Promise((resolve) => {",
+			"    setTimeout(() => resolve(true), x);",
+			"  });",
+			"};"
+		],
+		"description": "delayPromise"
+	},
+	"promise": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+		"prefix": [
+			"promise",
+			"#promise"
+		],
+		"body": [
+			"return new Promise((resolve,reject) => {",
+			"  resolve($1)",
+			"});",
+		],
+		"description": "promise"
+	},
+	"debug": {
+		"scope": "firerules",
+		"prefix": [
+			"dbg",
+			"#dbg"
+		],
+		"body": [
+			"let random_${RANDOM_HEX} = debug('random_${RANDOM_HEX}');"
+		],
+		"description": "debug"
+	}
+}
